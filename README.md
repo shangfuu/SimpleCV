@@ -6,7 +6,7 @@
 
 * Chapter3: Resizing and Cropping
     
-    ![image]()
+    ![image](https://github.com/shungfu/OpenCV/blob/master/Resources/convention.png)
 
 * Chapter4:
 
