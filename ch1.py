@@ -1,3 +1,4 @@
+# Chapter1: Read IMAGE - VIDEO - WEBCAM
 import cv2
 import time
 
