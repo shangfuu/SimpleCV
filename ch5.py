@@ -5,7 +5,7 @@ img = cv2.imread("Resources/cards.jpg")
 
 width, height = 250, 350
 # Open painter to show the cards four corners point
-pts1 = np.float32([[425, 88], [600, 160], [315, 320], [495, 400]])
+pts1 = np.float32([[425, 88], [595, 160], [315, 320], [485, 392]])
 # the correspond point of pts1
 pts2 = np.float32([[0, 0], [width, 0], [0, height], [width, height]])
 
