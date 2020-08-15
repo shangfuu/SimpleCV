@@ -1,4 +1,4 @@
-# Chapter6: Joinging Images
+# Chapter6: Joining Images
 
 import cv2
 import numpy as np

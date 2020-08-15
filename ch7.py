@@ -1,6 +1,7 @@
 # Chapter7: Color Detection
 import cv2
 import numpy as np
+from ch6 import stackImages
 
 
 def trackFunction(e):
@@ -11,7 +12,7 @@ def createTrackWindow():
     cv2.namedWindow("TrackBars")
     cv2.resizeWindow("TrackBars", 640, 240)
     # Set initial value as what you modified
-    cv2.createTrackbar("Hue Min", "TrackBars", 24, 179, trackFunction)
+    cv2.createTrackbar("Hue Min", "TrackBars", 32, 179, trackFunction)
     cv2.createTrackbar("Hue Max", "TrackBars", 64, 179, trackFunction)
     cv2.createTrackbar("Sat Min", "TrackBars", 43, 255, trackFunction)
     cv2.createTrackbar("Sat Max", "TrackBars", 255, 255, trackFunction)
@@ -33,8 +34,8 @@ if __name__ == "__main__":
     img = cv2.imread("Resources/lambo.jpg")
     # HSV: Hue, Saturation, Value
     imgHSV = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-    cv2.imshow("Origin", img)
-    cv2.imshow("HSV", imgHSV)
+    # cv2.imshow("Origin", img)
+    # cv2.imshow("HSV", imgHSV)
 
     createTrackWindow()
 
@@ -49,6 +50,9 @@ if __name__ == "__main__":
         # Mask the origin image
         imgResult = cv2.bitwise_and(img, img, mask=mask)
 
-        cv2.imshow("Mask", mask)
-        cv2.imshow("Result", imgResult)
+        # cv2.imshow("Mask", mask)
+        # cv2.imshow("Result", imgResult)
+
+        imgStack = stackImages(1, ([img, imgHSV], [mask, imgResult]))
+        cv2.imshow("All", imgStack)
         cv2.waitKey(1)
