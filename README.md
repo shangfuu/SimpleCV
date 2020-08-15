@@ -13,7 +13,7 @@
 * Chapter4: Shapes and Texts
 * Chapter5: Warp Perspective
 * Chapter6: Joining Images
-* Chapter7:
+* Chapter7: Color Detection
 * Chapter8:
 * Chapter9:
 * Project1:
